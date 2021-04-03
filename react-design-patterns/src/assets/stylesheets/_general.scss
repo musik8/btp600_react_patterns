@@ -1,0 +1,49 @@
+h1,h2,h3 {
+    font-family: $mainTextB;
+    letter-spacing: 0.03em;
+}
+h2 {
+    font-size: $h2d;
+    padding-bottom: (22/$desktop)*100vw;
+}
+h3 {
+    font-size: $h3d;
+}
+p {
+     font-family: $mainTextR; 
+     font-size: (14/$desktop)*100vw;
+     line-height: 1.5em;
+     letter-spacing: 0.04em;
+}
+
+label {
+    font-family: $mainTextR;
+}
+
+
+p,h1,h2,h3,h4,h5,button {
+    -webkit-font-smoothing: subpixel-antialiased;
+}
+
+
+//Form
+
+.form-row {
+
+    display: flex; 
+    
+    .input-wrapper {
+        &:first-child {
+            margin-right: $Dmw/4;
+        }
+        &:last-child {
+            margin-left: $Dmw/4;
+        }
+    }
+
+}
+.form-column {
+
+ padding-bottom: $IDmw;
+    
+}

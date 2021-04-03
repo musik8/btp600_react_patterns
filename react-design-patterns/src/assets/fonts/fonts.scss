@@ -1,0 +1,49 @@
+@font-face {
+    font-family: 'Poppins-Regular';
+    src: url('Poppins-Regular.eot');
+    src: local('Poppins Regular'), local('Poppins-Regular'),
+        url('Poppins-Regular.eot?#iefix') format('embedded-opentype'),
+        url('Poppins-Regular.woff2') format('woff2'),
+        url('Poppins-Regular.woff') format('woff'),
+        url('Poppins-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poppins-Bold';
+    src: url('Poppins-Bold.eot');
+    src: local('Poppins Bold'), local('Poppins-Bold'),
+        url('./Poppins-Bold.eot?#iefix') format('embedded-opentype'),
+        url('./Poppins-Bold.woff2') format('woff2'),
+        url('./Poppins-Bold.woff') format('woff'),
+        url('./Poppins-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+// @font-face {
+//     font-family: 'Aileron-Heavy';
+//     src: url('Aileron-Heavy.eot');
+//     src: local('Aileron Heavy'), local('Aileron-Heavy'),
+//         url('./Aileron-Heavy.eot?#iefix') format('embedded-opentype'),
+//         url('./Aileron-Heavy.woff2') format('woff2'),
+//         url('./Aileron-Heavy.woff') format('woff'),
+//         url('./Aileron-Heavy.ttf') format('truetype');
+//     font-weight: 900;
+//     font-style: normal;
+//     font-display: swap;
+// }
+
+
+// @font-face {
+//     font-family: 'Aileron';
+//     src: url('Aileron-Bold.eot');
+//     src: url('Aileron-Bold.eot?#iefix') format('embedded-opentype'),
+//         url('Aileron-Bold.woff2') format('woff2'),
+//         url('Aileron-Bold.woff') format('woff'),
+//         url('Aileron-Bold.ttf') format('truetype');
+//     font-weight: bold;
+//     font-style: normal;
+// }

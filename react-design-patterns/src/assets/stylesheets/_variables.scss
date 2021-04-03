@@ -1,0 +1,69 @@
+//$headerFont: "Libre Baskerville";
+$mainTextB: 'Poppins-Bold';
+$mainTextR: 'Poppins-Regular'; 
+
+
+//Border Radious
+
+$br: 20px;
+//$br: 0.8em;
+
+
+//Lengths
+$dashLength: 722;
+
+//margins
+
+//Desktop sizes
+$marginD: 40;
+$marginM: 40px;
+
+//Sizes
+$desktop: 1920;
+$mobile: 720;
+$mobileBreak: 991px;
+
+
+
+//Curves
+$easeInOut3: cubic-bezier(.79,.01,.14,.99);
+$easeInOut2: cubic-bezier(0.56, 0, 0.38, 1.01);
+
+
+//Desktop margin width
+$Dmw: ($marginD/$desktop) * 100vw;
+
+//Item desktop margin width
+$IDmw: ($marginD/$desktop) * 100vw;
+
+//Mobile margin width
+$Mmw: (30/$mobile) * 100vw;
+$IMmw: (30/$mobile) * 100vw;
+
+
+$h1d: (32/$desktop) * 100vw;
+$h2d: (22/$desktop) * 100vw;
+$h3d: (18/$desktop) * 100vw;
+
+$h1: 50px;
+$h1m: (36/$mobile) * 100vw;
+$h2m: (26/$mobile) * 100vw;
+$h3m: (16/$mobile) * 100vw;
+
+$h4m: (16/$mobile) * 100vw;
+$parM: (22/$mobile) * 100vw;
+
+@media screen and (max-width: $mobileBreak) {
+   
+    $br: 5vw;
+}
+     
+@media screen and (max-width: 767px) {
+
+
+}
+ 
+@media screen and (max-width: 479px) {
+
+    
+}

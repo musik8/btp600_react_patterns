@@ -1,0 +1,81 @@
+@import './assets/stylesheets/main';
+
+#app-container {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    padding: $Dmw/2;
+    box-sizing: border-box;
+    overflow: hidden;
+    // align-items: stretch;
+
+    .left-section {
+        padding: $Dmw/2;
+
+        width: (1500/$desktop)*100vw;
+
+        .ad-space {
+            border: 1px solid #000;
+        }
+    }
+    .right-section {
+        // padding: $Dmw/2;
+        flex-grow: 1;
+        overflow-y: auto;
+
+    }
+}
+.dashboard {
+    border: 1px solid #000;
+    height: 90vh;
+    overflow-y: auto;
+    position: relative;
+
+    .page {
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        position: absolute;
+    }
+}
+
+
+
+.page-appear {
+    opacity: 0;
+    display: none;
+}
+
+.page-enter {
+    display: block;
+    opacity: 0;
+}
+.page-enter-active {
+
+    opacity: 1;
+    transition: opacity 400ms 600ms;
+}
+
+.page-exit {
+    opacity: 1;
+}
+.page-exit-active {
+    opacity: 0;
+    transition: opacity 400ms;
+}
+
+@media screen and (max-width: $mobileBreak) {
+
+  #app-container {
+      position: relative;
+      display: block;
+      width: 100vw;
+      height: 100vh;
+      padding: 0;
+  }
+
+  .left-section {
+      display: none;
+  }
+}

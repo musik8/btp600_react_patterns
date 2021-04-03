@@ -1,0 +1,58 @@
+/// Mixin to customize scrollbars
+/// Beware, this does not work in all browsers
+
+/// @param {Length} $size - Horizontal scrollbar's height and vertical scrollbar's width
+/// @param {Color} $foreground-color - Scrollbar's color
+/// @param {Color} $background-color [mix($foreground-color, white, 50%)] - Scrollbar's color
+/// @example scss - Scrollbar styling
+///   @include scrollbars(.5em, slategray);
+@mixin scrollbars($size, $foreground-color, $background-color: mix($foreground-color, white,  50%)) {
+    // For Google Chrome
+    ::-webkit-scrollbar {
+        width:  $size;
+        height: $size;
+    }
+    ::-webkit-scrollbar-thumb {
+        background: $foreground-color;
+    }
+    ::-webkit-scrollbar-track {
+        background: $background-color;
+    }
+    // For Internet Explorer
+    body {
+      scrollbar-face-color: $foreground-color;
+      scrollbar-track-color: $background-color;
+    }
+  }
+
+
+  @mixin softUI($g1, $g2, $ds, $ls, $off, $blur, $inset) {
+
+    @if $inset {
+       
+        // background: linear-gradient(145deg, $g1, $g2);
+      
+        box-shadow:   
+       inset ($off + px) ($off + px) ($blur + px) $ds,
+       inset (-  $off + px) (- $off + px) ($blur + px) $ls;
+
+
+      } @else {
+        // background: linear-gradient(315deg,  $g1, $g2);
+      
+        @if $g1 != $g2 {
+          background: linear-gradient(145deg, $g1, $g2);
+        }
+
+        box-shadow:   
+        ($off + px) ($off + px) ($blur + px) $ds,
+        (-  $off + px) (- $off + px) ($blur + px) $ls;
+
+      }
+
+
+
+
+  }
+
+    
