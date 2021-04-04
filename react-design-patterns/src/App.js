@@ -4,8 +4,8 @@ import {BrowserRouter as Router, Route, Switch, NavLink } from "react-router-dom
 import {CSSTransition} from "react-transition-group";
 
 import Exampleone from "./components/Exampleone"
-import Exampletwo from "./components/Examplethree"
-import Examplethree from "./components/Exampletwo"
+import Examplethree from "./components/Examplethree"
+import Exampletwo from "./components/Exampletwo"
 
 
 
@@ -67,8 +67,6 @@ function App() {
           ))}
 
         </main>
-
-
 
         </Router>
         </div>
