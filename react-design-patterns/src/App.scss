@@ -12,7 +12,7 @@
     .left-section {
         padding: $Dmw/2;
 
-        width: (1500/$desktop)*100vw;
+        width: 100%;
 
         .ad-space {
             border: 1px solid #000;
@@ -27,7 +27,7 @@
 }
 .dashboard {
     border: 1px solid #000;
-    height: 90vh;
+    height: 100%;
     overflow-y: auto;
     position: relative;
 
