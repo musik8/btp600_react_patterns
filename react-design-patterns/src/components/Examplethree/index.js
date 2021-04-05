@@ -1,96 +1,61 @@
 import React, {Component, useEffect, useRef, useState} from 'react';
+import {ButtonIconUI, ButtonNoIconUI} from './BridgeImp/ButtonIMP.js'
+import {Link, Button} from './BridgeAbs/ButtonABS.js'
+
+import {Userblock} from './Mediator/Userblock.js'
+import {ComsMediator} from './Mediator/ComsMediator.js'
+
 
 import './style.scss';
 
-
-const ButtonUI = ({
-  theme,
-  ...props
-}) => {
-  return (
-    <button
-      {...props}
-      style={{
-        backgroundColor: theme.backgroundColor,
-        color: theme.color,
-      }}
-    />
-  )
-}
-
-const Link = ({
-  url,
-  uiComponent,
-  uiProps,
-  children,
-}) => {
-  const bridgeProps = {
-    ...uiProps,
-    onClick: () => window.open(url, '_blank')
-  }
-
-  return React.createElement(uiComponent, bridgeProps, children)
-}
-
-const Client = () => {
-  const theme = { backgroundColor: 'blue', color: 'white' }
-  return (
-
-    <Link
-      url="http://github.com/themithy/react-design-patterns"
-      uiComponent={ButtonUI}
-      uiProps={{ theme }}
-    >
-      See other patterns
-    </Link>
-  )
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+const mediator = new ComsMediator();
 
 const Examplethree = () => {
 
   const [display, setDisplay] = useState([]);
+  const [amount, setAmount] = useState(0);
 
-  const addContent = (e) => {
+
+  const addContent = (e, param) => {
+
       e.preventDefault();
-      console.log("added");
 
+      let item = <Userblock mediator={mediator} id={amount} icon={param}/>
+      setAmount((amount) => amount + 1);
 
-
+      setDisplay( arr => [...arr, item]);
 
   }
-
-
 
   return(<div>
 
     <div className="display-content">
-
+      {display.map(item => {
+        return item;
+      })}
     </div>
 
-
       <div className="client-menu">
-          <button onClick={e => addContent(e)}>
-            Add Button
-          </button>
+
+      <Button
+         UIdisplay={ButtonNoIconUI}
+         classDisplay={"regular"}
+         method={addContent}
+         param={false}
+       >
+           No Icon
+       </Button>
+
+       <Button
+          UIdisplay={ButtonIconUI}
+          classDisplay={"regular"}
+          method={addContent}
+          param={true}
+        >
+           With Icon
+        </Button>
 
       </div>
-
 
     </div>)
 }
