@@ -1,0 +1,100 @@
+@import './../../../assets/stylesheets/main';
+
+.reg-btn {
+
+    border: 1px solid #000;
+    border-radius: 1em;
+    padding: $IDmw/4;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+    height: (30/$desktop)*100vw;
+
+    transition: border-color 500ms $easeInOut3;
+
+    &.half {
+        width: 50%;
+    }
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    &.start {
+        order: -1;
+        margin-right: $IDmw/4;
+    }
+    &.end {
+        order: 5;
+        margin-right: $IDmw/4;
+    }
+
+    .reg-text {
+        font-family: $mainTextR;
+        color: #000;
+
+    }
+    .reg-icon {
+        padding-left: 10px;
+        svg {
+            width: (20/$desktop) *100vw;
+        }
+    }
+
+    &.nav-btn {
+
+    }
+
+    &.sub-btn {
+        width: (250/$desktop)*100vw;
+        height: (50/$desktop)*100vw;
+        justify-content: center;
+        padding: 10px;
+    }
+
+    //Used for mobile icon display
+    &.round-btn  {
+        margin-right: $IMmw/2;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+
+        .reg-icon {
+            padding: 0;
+        }
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &.mobile-search-btn {
+        // margin: $IMmw/2;
+        width: (250/$mobile)*100vw;
+        height: 50px;
+        justify-content: space-between;
+
+        .reg-text {
+            font-size: (30/$mobile)*100vw;
+        }
+        .reg-icon {
+            width: 40px;
+            height: 30px;
+        }
+        .reg-icon svg {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &.mobile-results-btn {
+        width: 50%;
+        height: 50px;
+        margin: $IMmw/2;
+    }
+
+    &.active-btn {
+        border-color: $green;
+    }
+}
