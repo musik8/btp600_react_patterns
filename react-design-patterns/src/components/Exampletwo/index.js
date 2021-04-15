@@ -3,14 +3,14 @@ import React, {Component, useEffect, useRef, useState} from 'react';
 import './style.scss';
 
 
-const Examplethree = () => {
+const Exampletwo = () => {
 
   return(<div>
 
-    <h1>Example Three</h1>
+    <h1>Example Two</h1>
 
 
     </div>)
 }
 
-export default Examplethree;
+export default Exampletwo;
